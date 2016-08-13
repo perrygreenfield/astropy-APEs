@@ -262,6 +262,10 @@ determined.
 Alternatives
 ------------
 
+[TBD]
+ +If there were any alternative solutions to solving the same problem, they should
+ +be discussed here, along with a justification for the chosen approach.
+
 NDData remains the same with LSSTData  
 +++++++++++++++++++++++++++++++++++++
 
