@@ -262,9 +262,21 @@ determined.
 Alternatives
 ------------
 
-[TBD]
-If there were any alternative solutions to solving the same problem, they should
-be discussed here, along with a justification for the chosen approach.
+[TBD] If there were any alternative solutions to solving the same problem, they should be discussed here, along with a justification for the chosen approach.
+
+NDData remains the same with LSSTData  
++++++++++++++++++++++++++++++++++++++
+
+In this case, NDData remains the same.  NDArr as defined here is still created, but 
+NDData is not required to reference.  Nonetheless, an NDData subclass could be 
+created that uses NDArr as reference for the NDData attributes.  For example, an 
+LSSTData  object would inherit from NDData, but it's data, mask, and uncertainty 
+attributes would  be mapped to the NDArr data, mask, and variance attributes 
+where as the meta attribute would be mapped to their Exposure Object.   
+
+LSST functions that use NDArr or Exposure object could still be contributed, but would
+have a decorator so that NDData objects without the .arr attribute could still use 
+those  functions or raise an Error if they were not compatible. 
 
 
 Decision rationale
